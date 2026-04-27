@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import NotFound from "./pages/NotFound";
 
 import {
   SignedIn,
@@ -81,6 +82,8 @@ export default function App() {
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/wishlist" element={<Wishlist />} />
                   <Route path="/users" element={<Users />} />
+                  <Route path="*" element={<NotFound />} />
+                  <Route path="/sign-in" element={<Auth />} />
                 </Routes>
               </div>
 
@@ -89,6 +92,7 @@ export default function App() {
         
 
       </SignedIn>
+      
     </BrowserRouter>
   );
 }
